@@ -44,4 +44,4 @@ function creation_carrousel(){
 }
 
 add_shortcode("carrousel", "creation_carrousel");
-?>  
+?>

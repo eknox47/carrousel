@@ -8,12 +8,7 @@
     let elmGalerie__img = elmGalerie.querySelectorAll('img')
     let elmCarrousel__figure = document.querySelector('.carrousel__figure')
     let elmCarrousel__form = document.querySelector(".carrousel__form")
-    console.log(elmGalerie__img.length)
-    
-    
-    
-    console.log(bouton__ouvrir.tagName)
-    
+
     bouton__ouvrir.addEventListener('mousedown', function(){
         console.log('boîte modale')
         elmCarrousel.classList.add('carrousel--ouvrir')
