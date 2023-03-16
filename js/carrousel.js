@@ -10,22 +10,30 @@
     let elmCarrousel__form = document.querySelector(".carrousel__form")
 
     bouton__ouvrir.addEventListener('mousedown', function(){
-        console.log('boîte modale')
+        
         elmCarrousel.classList.add('carrousel--ouvrir')
-        ajouter_carrousel()
+        ajouter_carrousel(0)
     })
     elmBouton__x.addEventListener('mousedown', function(){
-        console.log('boîte modale')
+        
         elmCarrousel.classList.remove('carrousel--ouvrir')
     })
+
+    elmGalerie__img.forEach(img => {
+        img.addEventListener("click", function(){
+            elmCarrousel.classList.add('carrousel--ouvrir')
+            ajouter_carrousel()
+        })
+    });
     
-    function ajouter_carrousel()
+    function ajouter_carrousel(index)
     {
         for (const elmImg of elmGalerie__img){
             ajouter_img(elmImg) // ajoute l'image dans le carrousel
             ajouter_radio()
         }
-        elmCarrousel__figure.children[0].classList.add("carrousel__img--activer")
+        elmCarrousel__figure.children[index].classList.add("carrousel__img--activer")
+        
     }
     
     function ajouter_img(elmImg){
